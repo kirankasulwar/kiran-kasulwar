@@ -1,5 +1,18 @@
 server:
-    port: 8088
+  port: 8088
 spring:
   application:
     name: rest
+  data:
+    mongodb:
+      auto-index-creation: true
+  mongodb:
+    embedded:
+      version: 4.0.2
+    uri: mongodb+srv://kasulwarkiran:<db_password>@rest-service-cluster.9fiuwkf.mongodb.net/
+    database: Kk_Mark1
+
+logging:
+  level:
+    org.springframework.data.mongodb: DEBUG
+    com.mongodb: DEBUG
