@@ -3,15 +3,12 @@ server:
 spring:
   application:
     name: kafka
-  kafka:
-    bootstrap-servers: localhost:9092
-    consumer:
-      group-id: my-kafka-group
-      auto-offset-reset: earliest
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      properties:
-        spring.json.trusted.packages: "*"
 
-app:
-  kafka:
-    topic-name: sample-topic
+# Kafka configuration
+kafka:
+  bootstrap-servers: localhost:9092
+  topic: my-topic
+  group-id: kk-consumer-group
+  partitions: 1
+  replication-factor: 1
+  auto-offset-reset: earliest

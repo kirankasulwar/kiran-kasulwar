@@ -16,3 +16,13 @@ logging:
   level:
     org.springframework.data.mongodb: DEBUG
     com.mongodb: DEBUG
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+
